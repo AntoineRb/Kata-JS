@@ -6,11 +6,11 @@ function fizzbuzz() {
     for ( let i = 1; i <= 100; i++ ) {
 
         if ( i % 3 === 0 ) {
-            dictOfValues[i] = 'Fizz'
+            dictOfValues[i] = 'Fizz';
         } else if ( i % 5 === 0 ) {
-            dictOfValues[i] = 'Buzz'
+            dictOfValues[i] = 'Buzz';
         } else if ( ( i % 3 === 0)  && ( i % 5 === 0 ) ) {
-            dictOfValues[i] = 'FizzBuzz'
+            dictOfValues[i] = 'FizzBuzz';
         } else {
             continue;
         }
