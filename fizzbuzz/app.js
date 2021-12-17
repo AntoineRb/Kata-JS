@@ -12,7 +12,7 @@ export function fizzbuzz( min, max ) {
         } else if ( ( i % 3 === 0)  && ( i % 5 === 0 ) ) {
             dictOfValues[i] = 'FizzBuzz';
         } else {
-            continue;
+            dictOfValues[i] = i;
         }
     }
     
@@ -20,10 +20,14 @@ export function fizzbuzz( min, max ) {
 }
 
 
-// let result = fizzbuzz( 90, 100 );
+let result = fizzbuzz( 47, 89 );
 
-// console.log( Object.keys(result).length );
-// console.log(' # ' + result.length );
+console.log(' # ' + Object.keys(result).length );
+
+let leng = Object.keys(result).length
+let a = ( leng == ( 89 - 47 ) + 1 ) ? true : false;
+
+console.log(a);
 
 // for ( let key in result ) {
 //     console.log(key + ' | ' + result[key]);

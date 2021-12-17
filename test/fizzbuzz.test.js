@@ -5,41 +5,39 @@ const assert = chai.assert;
 
 describe('#fizzbuzz()', () => {
 
-    const describeText   = 'Should do return fizz if i % 5 = 0, buzz for i % 3 <= 0 and fizzbuzz if the two conditions is true';
-    const expectedResult = {40: 'Buzz', 42: 'Fizz', 45: 'Fizz', 48: 'Fizz', 50: 'Buzz'};
+    
+    function fizzbuzzTesting( nbMin, nbMax, minValue, maxValue ) {
 
-    it( describeText, () => {
+        const describeText   = 'Should do return fizz if i % 5 = 0, buzz for i % 3 <= 0 and fizzbuzz if the two conditions is true';
 
-        // Set Range to check 
-        const min        = 0; 
-        const max        = 10;
+        it( describeText, () => {
 
-        // 6 for number of key between min = 0 & max = 10
-        const lengthOfDictExpected = 6;
-
-        // Expected Values
-        const firstValueOfDictExpected = 'Fizz';
-        const lastValueOfDictExpected = 'Buzz';
-
-        // function return a dict
-        const fbDict      = fizzbuzz( min, max );
-
-        const checkLengthOfDict =  Object.keys(fbDict).length == lengthOfDictExpected ? true : false; 
-
-        // first & last values of dict
-        const firstValue = fbDict[min];
-        const lastValue  = fbDict[max];
-
-        assert.isTrue(checkLengthOfDict, true, 'the length of the dictionary is not expected');
-        assert.equal( firstValue, firstValueOfDictExpected, `First Value ${firstValue} is unexpected`);
-        assert.equal( lastValue, lastValueOfDictExpected, `last Value ${lastValue} is unexpected`);
+            const firstValueOfDictExpected = minValue;
+            const lastValueOfDictExpected  = maxValue;
 
 
+    
+            // function return a dictionary
+            const fbDict            = fizzbuzz( nbMin, nbMax );
+            // Length of dictionary
+            const checkLengthOfDict =  ( Object.keys( fbDict ).length ) == ( nbMax - nbMin + 1 ) ? true : false;
+    
+            // first & last values of dictionary
+            const firstValue = fbDict[ nbMin ];
+            const lastValue  = fbDict[ nbMax ];
+    
+            assert.isTrue( checkLengthOfDict, true, 'the length of the dictionary is not expected' );
+            assert.equal( firstValue, firstValueOfDictExpected, `First Value ${firstValue} is unexpected` );
+            assert.equal( lastValue, lastValueOfDictExpected, `last Value ${lastValue} is unexpected` );
+        });
 
+        
+    }
 
-
-
-
-        // assert.equal(fizzbuzz(40, 50), expectedResult, 'Unexptected result from fizzbuzz() return');
-    });
+    fizzbuzzTesting( 0,  10, 'Fizz', 'Buzz' );
+    fizzbuzzTesting( 10, 20, 'Buzz', 'Buzz' );
+    fizzbuzzTesting( 20, 30, 'Buzz', 'Fizz' );
+    fizzbuzzTesting( 30, 40, 'Fizz', 'Buzz' );
+    fizzbuzzTesting( 40, 50, 'Buzz', 'Buzz' );
+    fizzbuzzTesting( 0, 100, 'Fizz', 'Buzz' );
 });
