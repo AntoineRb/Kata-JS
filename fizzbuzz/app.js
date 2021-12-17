@@ -1,9 +1,9 @@
 
-function fizzbuzz() {  
+export function fizzbuzz( min, max ) {  
 
     let dictOfValues = {};
 
-    for ( let i = 1; i <= 100; i++ ) {
+    for ( let i = min; i <= max; i++ ) {
 
         if ( i % 3 === 0 ) {
             dictOfValues[i] = 'Fizz';
@@ -20,9 +20,11 @@ function fizzbuzz() {
 }
 
 
-let result = fizzbuzz();
-console.log(result);
+// let result = fizzbuzz( 90, 100 );
 
-for ( [key, value] of result ) {
-    console.log(key + ' | ' + value);
-}
+// console.log( Object.keys(result).length );
+// console.log(' # ' + result.length );
+
+// for ( let key in result ) {
+//     console.log(key + ' | ' + result[key]);
+// }

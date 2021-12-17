@@ -1,0 +1,26 @@
+{
+  "name": "katajs",
+  "version": "1.0.0",
+  "description": "Testing for each kata",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntoineRb/Kata-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntoineRb/Kata-JS/issues"
+  },
+  "homepage": "https://github.com/AntoineRb/Kata-JS#readme",
+  "devDependencies": {
+    "chai": "^4.3.4"
+  }
+}

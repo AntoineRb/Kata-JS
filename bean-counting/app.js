@@ -1,9 +1,9 @@
 
-function countB( str ) {
+export function countB( str ) {
 
     let counter = 0;
 
-    for ( letter of str ) {
+    for ( let letter of str ) {
 
         if ( letter.toLowerCase() == 'b' ) {
             counter++;
@@ -13,11 +13,11 @@ function countB( str ) {
     return counter;
 }
 
-function countChar( str, char ) {
+export function countChar( str, char ) {
 
     let counter = 0;
 
-    for ( letter of str ) {
+    for ( let letter of str ) {
 
         if ( letter.toLowerCase() == char.toLowerCase() ) {
             counter++;
@@ -26,7 +26,3 @@ function countChar( str, char ) {
 
     return counter;
 }
-
-console.log(countB('BBC'));
-
-console.log(countChar('Kalinka kalinki kalimba', 'k'));
