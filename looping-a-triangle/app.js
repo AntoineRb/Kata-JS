@@ -1,24 +1,20 @@
 
 
 
-function makeTriangle( nb ) {
+export function makeTriangle() {
 
     let sharp = [];
-    for (let i = 0; i < nb; i++) {
+    for (let i = 0; i < 7; i++) {
         
-        if ( i >= 7 ) {
-            break;
-        }
 
         sharp.push( '#' );
         console.log( sharp.join( '' ) );
         
     }
-    console.log( sharp );
-    return sharp.length;
+    return sharp.join('');
 }
 
-let result = makeTriangle( 7 );
+// let result = makeTriangle( 7 );
 
-console.log( result );
+// console.log( result );
 
